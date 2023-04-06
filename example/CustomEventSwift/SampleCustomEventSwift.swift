@@ -25,7 +25,7 @@ import SampleAdSDK
   fileprivate var nativeAd: SampleCustomEventNativeAdSwift?
 
   static func adSDKVersion() -> GADVersionNumber {
-    let versionComponents = String(SampleSDKVersion).components(
+    let versionComponents = String("").components(
       separatedBy: ".")
 
     if versionComponents.count >= 3 {
@@ -47,7 +47,7 @@ import SampleAdSDK
     if versionComponents.count == 4 {
       version.majorVersion = Int(versionComponents[0]) ?? 0
       version.minorVersion = Int(versionComponents[1]) ?? 0
-      version.patchVersion = Int(versionComponents[2]) * 100 + Int(versionComponents[3])
+        version.patchVersion = (Int(versionComponents[2]) ?? 0) * 100 + (Int(versionComponents[3]) ?? 0)
     }
     return version
   }

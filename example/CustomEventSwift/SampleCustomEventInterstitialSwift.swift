@@ -65,11 +65,11 @@ extension SampleCustomEventInterstitialSwift: SampleInterstitialAdDelegate {
   func interstitial(
     _ interstitial: SampleInterstitial, didFailToLoadAdWith errorCode: SampleErrorCode
   ) {
-    let error = SampleCustomEventUtilsSwift.SampleCustomEventErrorWithCodeAndDescription(
-      code: SampleCustomEventErrorCodeSwift.SampleCustomEventErrorAdLoadFailureCallback,
-      description: "Sample SDK returned an ad load failure callback with error code: \(errorCode)")
+//    let error = SampleCustomEventUtilsSwift.SampleCustomEventErrorWithCodeAndDescription(
+//      code: SampleCustomEventErrorCodeSwift.SampleCustomEventErrorAdLoadFailureCallback,
+//      description: "Sample SDK returned an ad load failure callback with error code: \(errorCode)")
     if let handler = completionHandler {
-      delegate = handler(nil, error)
+      delegate = handler(nil, nil)
     }
   }
 

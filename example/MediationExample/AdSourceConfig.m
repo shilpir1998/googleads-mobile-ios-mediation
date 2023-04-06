@@ -19,7 +19,6 @@
 
 #import "AdSourceConfig.h"
 #import <SampleAdSDKAdapter/SampleAdSDKAdapter.h>
-#import "../CustomEvent/SampleCustomEventConstants.h"
 #import "MediationExample-Swift.h"
 
 NSString *const kCustomEventBannerAdUnitID = @"ca-app-pub-3940256099942544/2493674513";
@@ -96,7 +95,7 @@ NSString *const kCustomEventSwiftRewardedAdUnitID = @"ca-app-pub-394025609994254
 - (NSString *)awesomenessKey {
   switch (self.adSourceType) {
     case AdSourceTypeCustomEventObjC:
-      return SampleCustomEventExtraKeyAwesomeness;
+      return SampleAdapterExtraKeyAwesomeness;
     case AdSourceTypeCustomEventSwift:
       return [SampleCustomEventConstantsSwift awesomenessKey];
     case AdSourceTypeAdapter:
